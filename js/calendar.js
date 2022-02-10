@@ -25,6 +25,9 @@ export const createMonthCalendar = (month) => {
     if (dateInfo.bankHoliday) {
       dateElement.className += " bankHoliday";
     }
+    if (dateInfo.annualLeave) {
+      dateElement.className += " annualLeave";
+    }
 
     dateElement.innerText = dateInfo.date.getDate();
     return dateElement;

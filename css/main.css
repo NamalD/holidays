@@ -5,11 +5,14 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
-#app {
+body {
   height: 100%;
+  margin: 1rem;
+}
+
+#app {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
 }
 
 .monthName {
@@ -23,7 +26,8 @@ html {
 .date {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  text-align: center
+  text-align: center;
+  transition: background 1000ms linear;
 }
 
 .weekend {
@@ -32,4 +36,8 @@ html {
 
 .bankHoliday {
   background: coral;
+}
+
+.annualLeave {
+  background: lightgreen;
 }
