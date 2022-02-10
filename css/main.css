@@ -1,0 +1,35 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.monthName {
+  font-weight: bold;
+}
+
+.month {
+  padding-bottom: 1rem;
+}
+
+.date {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center
+}
+
+.weekend {
+  background: aqua;
+}
+
+.bankHoliday {
+  background: coral;
+}
