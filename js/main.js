@@ -1,5 +1,5 @@
 import { ENGLAND_BANK_HOLIDAYS, isBankHoliday } from "./bank-holidays.js";
-import { createMonthCalendar } from "./calendar";
+import { createMonthCalendar } from "./calendar.js";
 
 const range = (to) => [...Array(to).keys()];
 
