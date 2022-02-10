@@ -1,19 +1,27 @@
 import { createMonthCalendar } from "./calendar.js";
-import { MONTH_DATE_INFOS } from "./dates.js";
+import { generateMonthDateInfos } from "./dates.js";
 import { takeNextBestHoliday } from "./holidayOptimisation.js";
+
+let monthDateInfo = generateMonthDateInfos();
 
 const render = () => {
   const app = document.getElementById("app");
 
-  const monthCalendars = MONTH_DATE_INFOS.map(createMonthCalendar);
+  const monthCalendars = monthDateInfo.map(createMonthCalendar);
   app.replaceChildren(...monthCalendars);
 }
 
-const allDateInfo = MONTH_DATE_INFOS.flatMap(m => m);
+let allDateInfo = monthDateInfo.flatMap(m => m);
 
 // TODO: Input for annual leave
+const maxAnnualLeaveInput = document.getElementById("max-annual-leave");
+let annualLeaveLeft = maxAnnualLeaveInput.nodeValue;
+maxAnnualLeaveInput.addEventListener("change", (e) => {
+  monthDateInfo = generateMonthDateInfos();
+  allDateInfo = monthDateInfo.flatMap(m => m);
+  annualLeaveLeft = e.target.value;
+})
 // TODO: Max consecutive holiday limit
-let annualLeaveLeft = 22;
 
 render();
 let timeout;

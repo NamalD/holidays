@@ -27,7 +27,7 @@ export const createDateInfo = (lastDate, date) => {
 }
 
 // Date info for each day of every month
-export const MONTH_DATE_INFOS = LAST_DATES.map(lastDate =>
+export const generateMonthDateInfos = () => LAST_DATES.map(lastDate =>
   range(lastDate.getDate())
     .map(date => date + 1)
     .map(date => createDateInfo(lastDate, date))
