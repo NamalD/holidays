@@ -2,13 +2,15 @@
 
 This project is an Optimum Annual Leave Calculator.
 
-## Installation
-
-(Refer to doc/usage.md for installation instructions)
-
 ## Usage
 
-(Refer to doc/usage.md for usage instructions)
+This directory contains all the HTML5 Boilerplate documentation. You can use it
+as the location and basis for your own project's documentation.
+
+To start the development server, run the following command in your terminal:
+```zsh
+npm run dev
+```
 
 ## Contributing
 
@@ -17,5 +19,3 @@ If you would like to contribute to this project, please feel free to submit a pu
 ## License
 
 (Refer to LICENSE.txt for license information)
-
-
